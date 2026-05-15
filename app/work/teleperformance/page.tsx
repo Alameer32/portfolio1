@@ -15,6 +15,7 @@ import TechTag from "@/components/ui/TechTag";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { projects } from "@/lib/projects";
 import { subProjectDetails } from "@/lib/teleperformance-details";
 
@@ -189,12 +190,12 @@ export default function TeleperformancePage() {
                             <TechTag key={tech} label={tech} />
                           ))}
                         </div>
-                        <a
+                        <Link
                           href={`/work/teleperformance/${sub.slug}`}
                           className="flex shrink-0 items-center gap-2 font-mono text-xs font-medium uppercase tracking-wider text-accent transition-colors hover:text-accent/80"
                         >
                           Case study <ArrowRight size={12} />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </Reveal>

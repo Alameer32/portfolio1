@@ -8,6 +8,7 @@ import {
   Calendar,
   ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import Container from "@/components/layout/Container";
 import SectionLabel from "@/components/ui/SectionLabel";
 import TechTag from "@/components/ui/TechTag";
@@ -83,7 +84,7 @@ export default function FeaturedTeleperformance() {
             const Icon = iconMap[sub.icon] ?? Globe;
             return (
               <Reveal key={sub.title} delay={0.05 * i}>
-                <a
+                <Link
                   href={`/work/teleperformance/${sub.slug}`}
                   className="group flex h-full flex-col justify-between rounded-lg border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
                 >
@@ -113,7 +114,7 @@ export default function FeaturedTeleperformance() {
                     </div>
                     <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
                   </div>
-                </a>
+                </Link>
               </Reveal>
             );
           })}
@@ -124,7 +125,7 @@ export default function FeaturedTeleperformance() {
             const Icon = iconMap[sub.icon] ?? Globe;
             return (
               <Reveal key={sub.title} delay={0.05 * i}>
-                <a
+                <Link
                   href={`/work/teleperformance/${sub.slug}`}
                   className="group flex h-full flex-col justify-between rounded-lg border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
                 >
@@ -154,7 +155,7 @@ export default function FeaturedTeleperformance() {
                     </div>
                     <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
                   </div>
-                </a>
+                </Link>
               </Reveal>
             );
           })}

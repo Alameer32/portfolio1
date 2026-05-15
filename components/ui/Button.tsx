@@ -1,4 +1,5 @@
 import { type AnchorHTMLAttributes, type ButtonHTMLAttributes } from "react";
+import Link from "next/link";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md";
@@ -31,6 +32,10 @@ type ButtonAsLink = BaseProps &
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
+function isExternal(href: string) {
+  return href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("/resume");
+}
+
 export default function Button({
   variant = "primary",
   size = "md",
@@ -41,10 +46,20 @@ export default function Button({
   const classes = `inline-flex items-center justify-center gap-2 rounded font-mono text-xs font-medium uppercase tracking-wider transition-colors duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if ("href" in props && props.href !== undefined) {
+    const { href, ...rest } = props as AnchorHTMLAttributes<HTMLAnchorElement> & { href: string };
+
+    if (isExternal(href)) {
+      return (
+        <a className={classes} href={href} {...rest}>
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      <Link className={classes} href={href} {...rest}>
         {children}
-      </a>
+      </Link>
     );
   }
 
