@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#353436",
+                    "primary-container": "#8083ff",
+                    "background": "#131314",
+                    "tertiary-fixed-dim": "#ffb783",
+                    "tertiary": "#ffb783",
+                    "surface-container-low": "#1c1b1c",
+                    "on-background": "#e5e2e3",
+                    "surface-container-high": "#2a2a2b",
+                    "on-primary-fixed": "#07006c",
+                    "surface-dim": "#131314",
+                    "surface-container-lowest": "#0e0e0f",
+                    "outline": "#908fa0",
+                    "surface-container-highest": "#353436",
+                    "primary": "#c0c1ff",
+                    "tertiary-container": "#d97721",
+                    "on-secondary-fixed-variant": "#005321",
+                    "on-tertiary-container": "#452000",
+                    "on-primary": "#1000a9",
+                    "surface-bright": "#3a393a",
+                    "secondary-container": "#00b954",
+                    "secondary": "#4ae176",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-tertiary-fixed": "#301400",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "surface-tint": "#c0c1ff",
+                    "on-secondary-container": "#004119",
+                    "on-secondary-fixed": "#002109",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#003915",
+                    "inverse-surface": "#e5e2e3",
+                    "on-surface-variant": "#c7c4d7",
+                    "on-tertiary": "#4f2500",
+                    "inverse-on-surface": "#313031",
+                    "surface-container": "#201f20",
+                    "surface": "#131314",
+                    "primary-fixed": "#e1e0ff",
+                    "outline-variant": "#464554",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#4ae176",
+                    "secondary-fixed": "#6bff8f",
+                    "tertiary-fixed": "#ffdcc5",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#703700",
+                    "on-surface": "#e5e2e3",
+                    "on-primary-container": "#0d0096",
+                    "inverse-primary": "#494bd6",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "section-gap": "128px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Geist"],
+                    "body-md": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "headline-xl-mobile": ["Geist"],
+                    "meta-sm": ["JetBrains Mono"],
+                    "meta-xs": ["JetBrains Mono"],
+                    "body-lg": ["Geist"],
+                    "headline-xl": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "meta-sm": ["13px", {"lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "meta-xs": ["11px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #131314; color: #e5e2e3; font-family: 'Geist', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .terminal-cursor::after { content: '_'; animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased overflow-x-hidden">
+<!-- TopNavBar Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-outline-variant dark:border-outline-variant">
+<nav class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop w-full">
+<div class="font-headline-md text-headline-md font-bold text-on-background dark:text-on-background tracking-tighter">
+                SA
+            </div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center p-2 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden md:flex gap-unit">
+<span class="text-primary dark:text-primary font-meta-sm text-meta-sm tracking-tighter uppercase border-b border-primary pb-1">WORK</span>
+<span class="text-on-surface-variant dark:text-on-surface-variant font-meta-sm text-meta-sm tracking-tighter uppercase hover:text-primary transition-colors duration-200 cursor-pointer">ABOUT</span>
+<span class="text-on-surface-variant dark:text-on-surface-variant font-meta-sm text-meta-sm tracking-tighter uppercase hover:text-primary transition-colors duration-200 cursor-pointer">EXPERIENCE</span>
+</div>
+</div>
+</nav>
+</header>
+<main class="relative min-h-screen pt-16 flex flex-col px-margin-mobile">
+<!-- Hero Content Section -->
+<section class="mt-16 flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<p class="font-meta-sm text-meta-sm text-primary uppercase tracking-widest flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    // software engineer.
+                </p>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-background tracking-tighter max-w-sm">
+                    I build software that <span class="text-primary">ships</span> and <span class="text-primary">scales</span>.
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs leading-relaxed">
+                    Final-year student at UTM. I ship automation and full-stack products.
+                </p>
+</div>
+<!-- Call to Action Cluster -->
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary-fixed py-4 font-meta-sm text-meta-sm font-bold tracking-tighter active:scale-[0.98] transition-all rounded">
+                    VIEW_SELECTED_WORKS //
+                </button>
+<button class="w-full border border-outline-variant text-on-background py-4 font-meta-sm text-meta-sm font-bold tracking-tighter active:scale-[0.98] transition-all rounded bg-surface-container-lowest">
+                    GET_IN_TOUCH
+                </button>
+</div>
+<!-- Stats Stacked Vertically -->
+<div class="mt-8 grid grid-cols-1 gap-4 border-l border-outline-variant pl-4 py-4">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-background">04+</span>
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-wider">Years Exp</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-background">20+</span>
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-wider">Ships Complete</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-background">99.9%</span>
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-wider">Logic Accuracy</span>
+</div>
+</div>
+</section>
+<!-- Technical Background Visual -->
+<div class="absolute right-0 bottom-0 -z-10 opacity-20 pointer-events-none overflow-hidden">
+<div class="w-64 h-64 bg-primary-container blur-[100px] rounded-full translate-x-1/2 translate-y-1/2"></div>
+</div>
+<!-- Terminal-like Experience Snippet -->
+<section class="mt-section-gap mb-16">
+<div class="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+<div class="flex items-center gap-2 mb-4 border-b border-outline-variant pb-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="font-meta-xs text-meta-xs text-outline ml-2">stack.json</span>
+</div>
+<div class="font-meta-sm text-meta-sm leading-6">
+<p class="text-secondary"><span class="text-primary">"languages"</span>: ["TypeScript", "Rust", "Go"],</p>
+<p class="text-secondary"><span class="text-primary">"frameworks"</span>: ["React", "Next.js", "Node"],</p>
+<p class="text-secondary"><span class="text-primary">"databases"</span>: ["PostgreSQL", "Redis"],</p>
+<p class="text-on-surface-variant mt-2 terminal-cursor">ready_to_deploy</p>
+</div>
+</div>
+</section>
+<!-- Project Preview Placeholder -->
+<section class="mb-section-gap">
+<div class="border border-outline-variant rounded-lg overflow-hidden relative aspect-video bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="A macro close-up of a high-resolution laptop screen displaying complex lines of code in a dark-themed integrated development environment. The lighting is cold, with blue and violet hues reflecting off the keys, highlighting a sophisticated and clean software engineering workspace. The focus is sharp on a specific block of logic, emphasizing technical precision and architectural mastery in a minimalist, modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2g8zlxMgXLfNG03OxHXALLhs9V2g8KXX-ExZKufOhrrPcZ4emvnxFlzB9I92OHELwC5N_pvJ3vg6F2qVT-K7dHGt_z5WySat4Vn2S2PEKLsMJiBSnW7c2QRm2DDiC_3uCHH6YA8-kNWKYI6GdSm4y7QN9U7ixkx3vESQ2f_hbcVRbCjILduKbwYWdzCVqgvSlmINagI8eWGVUzu10OMICSNALwRqA6m1Naf6ae0AWRyY0jlEYpHdE3mQfJ_U_mM5gJEdD3fJEJIc"/>
+<div class="absolute bottom-4 right-4">
+<span class="font-meta-sm text-meta-sm text-primary bg-background/60 backdrop-blur px-3 py-1 border border-primary/30 rounded">
+                        LATEST_BUILD_01
+                    </span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-section-gap border-t border-outline-variant dark:border-outline-variant bg-background dark:bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-unit">
+<div class="flex flex-col gap-4">
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary">
+                    LET'S_CONNECT
+                </h2>
+<div class="flex gap-4">
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">GITHUB</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">LINKEDIN</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">SOURCE_CODE</a>
+</div>
+</div>
+<div class="mt-8 flex flex-col gap-2">
+<span class="font-meta-xs text-meta-xs text-outline dark:text-outline uppercase">© 2024 SALMAN ALAMEER // BUILT FOR SCALE</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">circle</span>
+<span class="font-meta-xs text-meta-xs text-secondary uppercase">AVAILABLE_FOR_WORK</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

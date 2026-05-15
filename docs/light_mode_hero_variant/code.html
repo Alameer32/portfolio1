@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Manually injecting the Geist font concept as it's not standard on Google Fonts */
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-Black.woff2') format('woff2');
+            font-weight: 800;
+        }
+        
+        body {
+            background-color: #FAFAFA;
+            color: #0A0A0B;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#E5E5E7",
+                      "primary-container": "#6366F1",
+                      "background": "#FAFAFA",
+                      "tertiary-fixed-dim": "#ffb783",
+                      "tertiary": "#ffb783",
+                      "surface-container-low": "#FFFFFF",
+                      "on-background": "#0A0A0B",
+                      "surface-container-high": "#F4F4F5",
+                      "on-primary-fixed": "#FFFFFF",
+                      "surface-dim": "#FAFAFA",
+                      "surface-container-lowest": "#FFFFFF",
+                      "outline": "#A1A1AA",
+                      "surface-container-highest": "#E5E5E7",
+                      "primary": "#6366F1",
+                      "tertiary-container": "#d97721",
+                      "on-secondary-fixed-variant": "#005321",
+                      "on-tertiary-container": "#452000",
+                      "on-primary": "#FFFFFF",
+                      "surface-bright": "#FFFFFF",
+                      "secondary-container": "#22C55E",
+                      "secondary": "#22C55E",
+                      "on-primary-fixed-variant": "#4F46E5",
+                      "on-tertiary-fixed": "#301400",
+                      "primary-fixed-dim": "#6366F1",
+                      "surface-tint": "#6366F1",
+                      "on-secondary-container": "#FFFFFF",
+                      "on-secondary-fixed": "#002109",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary": "#FFFFFF",
+                      "inverse-surface": "#0A0A0B",
+                      "on-surface-variant": "#52525B",
+                      "on-tertiary": "#4f2500",
+                      "inverse-on-surface": "#FAFAFA",
+                      "surface-container": "#FFFFFF",
+                      "surface": "#FFFFFF",
+                      "primary-fixed": "#E0E7FF",
+                      "outline-variant": "#E5E5E7",
+                      "error-container": "#FEE2E2",
+                      "secondary-fixed-dim": "#22C55E",
+                      "secondary-fixed": "#4ADE80",
+                      "tertiary-fixed": "#ffdcc5",
+                      "on-error": "#FFFFFF",
+                      "on-tertiary-fixed-variant": "#703700",
+                      "on-surface": "#0A0A0B",
+                      "on-primary-container": "#FFFFFF",
+                      "inverse-primary": "#6366F1",
+                      "error": "#EF4444"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "0px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "container-max": "1200px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "section-gap": "128px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Geist"],
+                      "body-md": ["Geist"],
+                      "headline-md": ["Geist"],
+                      "headline-xl-mobile": ["Geist"],
+                      "meta-sm": ["JetBrains Mono"],
+                      "meta-xs": ["JetBrains Mono"],
+                      "body-lg": ["Geist"],
+                      "headline-xl": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                      "meta-sm": ["13px", {"lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "meta-xs": ["11px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop w-full">
+<div class="font-headline-md text-headline-md font-bold text-on-background tracking-tighter">SA</div>
+<div class="hidden md:flex gap-8">
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-primary border-b border-primary pb-1 transition-colors duration-200" href="#">WORK</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">ABOUT</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">EXPERIENCE</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">CONTACT</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">dark_mode</span>
+<div class="hidden md:flex items-center gap-2 group cursor-pointer">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-meta-sm text-meta-sm tracking-tighter text-on-background">AVAILABLE_FOR_HIRE</span>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Primary Headline -->
+<div class="md:col-start-1 md:col-span-8 space-y-unit">
+<span class="font-meta-sm text-meta-sm text-primary uppercase tracking-[0.2em] mb-4 block">ARCHITECTURE &amp; ENGINEERING</span>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl max-md:text-headline-xl-mobile text-on-background">
+                    DESIGNING SYSTEMS FOR <br/>
+<span class="text-outline">UNCOMPROMISED SCALE.</span>
+</h1>
+<div class="max-w-xl mt-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Independent software architect specializing in distributed systems, high-performance infrastructure, and minimalist interfaces. Bridging the gap between aesthetic intentionality and technical discipline.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4 mt-12">
+<button class="bg-primary text-on-primary font-meta-sm text-meta-sm px-8 py-4 border border-primary hover:bg-transparent hover:text-primary transition-all active:scale-95">
+                        VIEW_PORTFOLIO //
+                    </button>
+<button class="border border-outline-variant bg-surface text-on-background font-meta-sm text-meta-sm px-8 py-4 hover:bg-surface-container-high transition-all active:scale-95">
+                        GET_IN_TOUCH
+                    </button>
+</div>
+</div>
+<!-- Right Column: Meta Info / Status -->
+<div class="md:col-span-4 flex flex-col gap-12 mt-12 md:mt-0">
+<div class="border border-outline-variant p-6 bg-surface space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-meta-xs text-meta-xs text-outline uppercase">CURRENT_LOCATION</span>
+<span class="font-meta-xs text-meta-xs text-on-background uppercase">DUBAI, UAE</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-meta-xs text-meta-xs text-outline uppercase">TIMEZONE</span>
+<span class="font-meta-xs text-meta-xs text-on-background uppercase">UTC+4</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-meta-xs text-meta-xs text-outline uppercase">SPECIALIZATION</span>
+<span class="font-meta-xs text-meta-xs text-on-background uppercase">FULL_STACK</span>
+</div>
+</div>
+<div class="relative group overflow-hidden border border-outline-variant">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-square" data-alt="A clean, minimalist high-tech workspace in a bright light-mode aesthetic. A single high-end monitor displays complex code snippets with subtle indigo syntax highlighting. The setting is a pristine white desk in a room with large windows letting in soft natural morning light. The overall mood is cold, professional, and mathematically precise with sharp edges and no clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSv_uYJ8aSqxLHhzZSRzVl7flW_Q-IaUvSac9vmf4mXzpXOdHA6T4aQWqIbG0URuJsnPiXV0tBDxvY7UnpjFQ_F9LweaWBM8dFZV4KTaVctO7w-GZxewWmAFXWVMyBjXs1kHtV1Kv-3aAhKgVEgY9fd9AWn7n5ynBaKEtc52sym4QFv4EVBDSkqFL1nxEbDN1eNvyjiUEA-rxshxmHSg7n_OCku_EgIWycvfTaUP5vQO3DZDYKsvScP5l1gmDiICLku0bDYmFIKhI"/>
+<div class="absolute bottom-0 left-0 p-4 bg-background/90 backdrop-blur-md border-t border-r border-outline-variant">
+<span class="font-meta-xs text-meta-xs text-on-background">SYS_STATUS: OPTIMIZED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Breadcrumbs / Stats (High Density UI Pattern) -->
+<section class="mt-section-gap grid grid-cols-2 md:grid-cols-4 gap-px bg-outline-variant border border-outline-variant">
+<div class="bg-surface p-8">
+<p class="font-meta-xs text-meta-xs text-outline mb-2 uppercase">Systems_Deployed</p>
+<p class="font-headline-md text-headline-md text-on-background">42+</p>
+</div>
+<div class="bg-surface p-8">
+<p class="font-meta-xs text-meta-xs text-outline mb-2 uppercase">Lines_Written</p>
+<p class="font-headline-md text-headline-md text-on-background">1.2M</p>
+</div>
+<div class="bg-surface p-8">
+<p class="font-meta-xs text-meta-xs text-outline mb-2 uppercase">Uptime_Record</p>
+<p class="font-headline-md text-headline-md text-on-background">99.9%</p>
+</div>
+<div class="bg-surface p-8">
+<p class="font-meta-xs text-meta-xs text-outline mb-2 uppercase">Global_Users</p>
+<p class="font-headline-md text-headline-md text-on-background">2.4M</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-unit">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+<div class="space-y-4">
+<p class="font-headline-lg text-headline-lg font-bold text-on-background max-w-md">LETS_BUILD_THE_FUTURE_OF_LOGIC.</p>
+<div class="flex gap-6">
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary transition-all focus:outline-none focus:ring-1 focus:ring-primary" href="#">GITHUB</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary transition-all focus:outline-none focus:ring-1 focus:ring-primary" href="#">LINKEDIN</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary transition-all focus:outline-none focus:ring-1 focus:ring-primary" href="#">SOURCE_CODE</a>
+</div>
+</div>
+<div class="text-right">
+<p class="font-meta-xs text-meta-xs text-outline">© 2024 SALMAN ALAMEER // BUILT FOR SCALE</p>
+<p class="font-meta-xs text-meta-xs text-outline mt-1 uppercase">Dubai // London // remote</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

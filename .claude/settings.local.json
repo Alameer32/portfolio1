@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"C:/Users/salma/Desktop/new porfolio/portfolio/node_modules/next/dist/docs\" -name \"*.md\" -type f -exec grep -l \"deprecat\\\\|breaking\" {} \\\\;)",
+      "Bash(mv src/app ./app)",
+      "Bash(rm -rf src)",
+      "Bash(rm jsconfig.json)",
+      "Bash(pnpm add:*)",
+      "Bash(mv app/layout.js app/layout.tsx)",
+      "Bash(mv app/page.js app/page.tsx)",
+      "Bash(mkdir:*)",
+      "Bash(pnpm build:*)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('linked'\\) || k.toLowerCase\\(\\).includes\\('github'\\)\\)\\)\")",
+      "Bash(node -e \"import\\('lucide-react'\\).then\\(l => console.log\\(Object.keys\\(l\\).filter\\(k => /github|linked/i.test\\(k\\)\\)\\)\\)\")",
+      "Bash(the repo does not exists should i create one now?)"
+    ]
+  }
+}

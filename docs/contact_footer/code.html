@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.cdnfonts.com/css/geist" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#353436",
+                    "primary-container": "#8083ff",
+                    "background": "#131314",
+                    "tertiary-fixed-dim": "#ffb783",
+                    "tertiary": "#ffb783",
+                    "surface-container-low": "#1c1b1c",
+                    "on-background": "#e5e2e3",
+                    "surface-container-high": "#2a2a2b",
+                    "on-primary-fixed": "#07006c",
+                    "surface-dim": "#131314",
+                    "surface-container-lowest": "#0e0e0f",
+                    "outline": "#908fa0",
+                    "surface-container-highest": "#353436",
+                    "primary": "#c0c1ff",
+                    "tertiary-container": "#d97721",
+                    "on-secondary-fixed-variant": "#005321",
+                    "on-tertiary-container": "#452000",
+                    "on-primary": "#1000a9",
+                    "surface-bright": "#3a393a",
+                    "secondary-container": "#00b954",
+                    "secondary": "#4ae176",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-tertiary-fixed": "#301400",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "surface-tint": "#c0c1ff",
+                    "on-secondary-container": "#004119",
+                    "on-secondary-fixed": "#002109",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#003915",
+                    "inverse-surface": "#e5e2e3",
+                    "on-surface-variant": "#c7c4d7",
+                    "on-tertiary": "#4f2500",
+                    "inverse-on-surface": "#313031",
+                    "surface-container": "#201f20",
+                    "surface": "#131314",
+                    "primary-fixed": "#e1e0ff",
+                    "outline-variant": "#464554",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#4ae176",
+                    "secondary-fixed": "#6bff8f",
+                    "tertiary-fixed": "#ffdcc5",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#703700",
+                    "on-surface": "#e5e2e3",
+                    "on-primary-container": "#0d0096",
+                    "inverse-primary": "#494bd6",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "section-gap": "128px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Geist"],
+                    "body-md": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "headline-xl-mobile": ["Geist"],
+                    "meta-sm": ["JetBrains Mono"],
+                    "meta-xs": ["JetBrains Mono"],
+                    "body-lg": ["Geist"],
+                    "headline-xl": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "meta-sm": ["13px", {"lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "meta-xs": ["11px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #131314;
+        color: #e5e2e3;
+        font-family: 'Geist', sans-serif;
+      }
+      .cursor-blink {
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: #c0c1ff }
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-outline-variant dark:border-outline-variant">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop w-full">
+<div class="font-headline-md text-headline-md font-bold text-on-background dark:text-on-background tracking-tighter">
+                SA
+            </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">WORK</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">ABOUT</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200" href="#">EXPERIENCE</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-primary dark:text-primary border-b border-primary pb-1 transition-colors duration-200" href="#">CONTACT</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors active:scale-95">dark_mode</button>
+<div class="hidden md:block font-meta-sm text-meta-sm tracking-tighter text-primary bg-primary/10 px-3 py-1 border border-primary/20 rounded-lg">
+                    AVAILABLE_FOR_HIRE
+                </div>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Contact Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap" id="contact">
+<div class="flex flex-col gap-16 md:gap-24">
+<!-- Section Label -->
+<div class="flex items-center gap-4">
+<span class="font-meta-sm text-meta-sm text-primary uppercase tracking-widest">06 — CONTACT</span>
+<div class="h-px w-24 bg-outline-variant"></div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 flex flex-col gap-8">
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl max-w-3xl">
+                            Let's build something <span class="text-primary italic">exceptional</span>.
+                        </h2>
+<!-- Large Focal Email -->
+<div class="mt-8">
+<a class="group relative inline-block" href="mailto:hello@salmanalameer.com">
+<span class="font-headline-lg text-headline-lg md:text-[64px] tracking-tight text-on-background group-hover:text-primary transition-colors duration-300">
+                                    hello@salman.me
+                                </span>
+<div class="absolute bottom-0 left-0 w-0 h-1 bg-primary group-hover:w-full transition-all duration-500 ease-in-out"></div>
+</a>
+</div>
+</div>
+<!-- Technical Detail Panel -->
+<div class="md:col-span-4 flex flex-col justify-end">
+<div class="p-8 border border-outline-variant bg-surface-container-lowest flex flex-col gap-6 relative overflow-hidden group">
+<!-- Visual Texture: Blueprint Grid -->
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#464554_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Current Status</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#4ae176]"></span>
+<span class="font-meta-sm text-meta-sm text-on-surface">OPEN TO NEW VENTURES</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    I specialize in architecting scalable web systems and minimalist user experiences. Reach out for consulting, full-time opportunities, or architectural reviews.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Links & Assets -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter pt-12 border-t border-outline-variant">
+<a class="group flex items-center justify-between p-6 border border-outline-variant hover:border-primary transition-colors" href="#">
+<div class="flex flex-col">
+<span class="font-meta-xs text-meta-xs text-outline mb-1">NETWORK</span>
+<span class="font-headline-md text-headline-md">LinkedIn</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform group-hover:translate-x-1">north_east</span>
+</a>
+<a class="group flex items-center justify-between p-6 border border-outline-variant hover:border-primary transition-colors" href="#">
+<div class="flex flex-col">
+<span class="font-meta-xs text-meta-xs text-outline mb-1">REPOSITORIES</span>
+<span class="font-headline-md text-headline-md">GitHub</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform group-hover:translate-x-1">north_east</span>
+</a>
+<a class="group flex items-center justify-between p-6 border border-outline-variant hover:border-primary transition-colors" href="#">
+<div class="flex flex-col">
+<span class="font-meta-xs text-meta-xs text-outline mb-1">CREDENTIALS</span>
+<span class="font-headline-md text-headline-md">Resume PDF</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform group-hover:translate-x-1">download</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Technical Contact Form (Terminal Style) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+<div class="bg-surface-container-low border border-outline-variant overflow-hidden">
+<!-- Terminal Header -->
+<div class="bg-surface-container-high px-4 py-2 flex items-center justify-between border-b border-outline-variant">
+<div class="flex gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-error/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary/40"></div>
+</div>
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">message_stream.v1.0</span>
+<div class="w-12"></div>
+</div>
+<!-- Terminal Body -->
+<div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-meta-sm text-meta-sm text-primary">NAME_ID</label>
+<input class="bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary font-meta-sm text-meta-sm text-on-surface placeholder:text-surface-variant w-full p-0 pb-2" placeholder="Who are you?" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-meta-sm text-meta-sm text-primary">CONTACT_ENDPOINT</label>
+<input class="bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary font-meta-sm text-meta-sm text-on-surface placeholder:text-surface-variant w-full p-0 pb-2" placeholder="email@address.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-meta-sm text-meta-sm text-primary">MESSAGE_PAYLOAD</label>
+<textarea class="bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary font-meta-sm text-meta-sm text-on-surface placeholder:text-surface-variant w-full p-0 pb-2 resize-none" placeholder="Brief project overview or inquiry..." rows="4"></textarea>
+</div>
+<button class="self-start mt-4 px-8 py-3 bg-primary text-on-primary font-meta-sm text-meta-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                            EXECUTE_SEND //
+                        </button>
+</div>
+<div class="hidden md:flex flex-col justify-center border-l border-outline-variant pl-12">
+<img alt="Technological connectivity" class="w-full h-64 object-cover border border-outline-variant opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="A highly detailed close-up of a complex motherboard illuminated by neon indigo and green lights. The perspective is low and dramatic, showing the intricate copper paths and silicon architecture as if it were a sprawling cyberpunk city. The scene is shrouded in deep shadows, with a high-contrast aesthetic that emphasizes precision and technical mastery. The overall mood is cold, disciplined, and futuristic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALPRjTsGX_BbdEWM8ePmOuV_KowuQOitEtxLokg8HrTMSw8M7Rl3TTZ9tkiVxI1RIQX01SEZMGW5JI5p-H60RUDKYT8sraFgFKWEM6sC7mhOCGJiDK96-BrOZwjGUNRsQvLHzz9xADNYvFco1B4RbTnXMnSi9PBMz-GyFnAkdOfyJsg-zJJdS_a_ytsoxqCFJI_MbIjDEpuVP566ohcrOACtHodSIPuMXUz8bsr6C2bmVAaZCuWpR_c1331DlC03nF5EI0HI1tWtk"/>
+<div class="mt-4 font-meta-xs text-meta-xs text-outline leading-relaxed italic">
+                            System process: awaiting user input for direct communication channel initialization. All data is transmitted over secured protocols.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-background dark:bg-background border-t border-outline-variant dark:border-outline-variant py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-unit">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-12">
+<div class="flex flex-col gap-4">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">
+                        SALMAN ALAMEER
+                    </div>
+<div class="font-meta-xs text-meta-xs text-outline dark:text-outline uppercase tracking-[0.2em]">
+                        DESIGNED WITH INTENTION, BUILT WITH CARE.
+                    </div>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-meta-sm text-meta-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary underline transition-all focus:outline-none focus:ring-1 focus:ring-primary" href="#">GITHUB</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary underline transition-all focus:outline-none focus:ring-1 focus:ring-primary" href="#">LINKEDIN</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary underline transition-all focus:outline-none focus:ring-1 focus:ring-primary" href="#">SOURCE_CODE</a>
+</div>
+</div>
+<div class="mt-24 pt-8 border-t border-outline-variant/30 flex justify-between items-center">
+<div class="font-meta-xs text-meta-xs text-surface-variant">
+                    © 2024 SALMAN ALAMEER // BUILT FOR SCALE
+                </div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="font-meta-xs text-meta-xs text-outline">SYSTEMS_ACTIVE</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

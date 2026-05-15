@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+body {
+    background-color: #131314;
+    color: #e5e2e3;
+    -webkit-font-smoothing: antialiased
+    }
+.grain-effect {
+    position: relative
+    }
+.grain-effect::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC6AE9C5LclgGuERoRmis64DiJT3HmeYADuJ_FMdXDiQDphcV5CBOe2zkaiohjrvyBGm3Lpw4xFH8kG2DAboaraFTUUYID4jepcyGbGdmZokIRtkvmCvJ9K2Yy7-x2_ZB7bsaqvx8giC39Hl_Oxs33R9RtT7CKF7SmD3r7Jea3cpPOwHBX2u72d5T7F2nurF0iVdwE5Wtv2WCwKl60IMMDCfGwIcUOOAUIQ6cDg-G8Ua8wPVBRbkiLFF2O4tjWMOQvh2odkMlzifpc);
+    opacity: 0.15;
+    pointer-events: none;
+    mix-blend-mode: overlay
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#353436",
+                      "primary-container": "#8083ff",
+                      "background": "#131314",
+                      "tertiary-fixed-dim": "#ffb783",
+                      "tertiary": "#ffb783",
+                      "surface-container-low": "#1c1b1c",
+                      "on-background": "#e5e2e3",
+                      "surface-container-high": "#2a2a2b",
+                      "on-primary-fixed": "#07006c",
+                      "surface-dim": "#131314",
+                      "surface-container-lowest": "#0e0e0f",
+                      "outline": "#908fa0",
+                      "surface-container-highest": "#353436",
+                      "primary": "#c0c1ff",
+                      "tertiary-container": "#d97721",
+                      "on-secondary-fixed-variant": "#005321",
+                      "on-tertiary-container": "#452000",
+                      "on-primary": "#1000a9",
+                      "surface-bright": "#3a393a",
+                      "secondary-container": "#00b954",
+                      "secondary": "#4ae176",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "on-tertiary-fixed": "#301400",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "surface-tint": "#c0c1ff",
+                      "on-secondary-container": "#004119",
+                      "on-secondary-fixed": "#002109",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary": "#003915",
+                      "inverse-surface": "#e5e2e3",
+                      "on-surface-variant": "#c7c4d7",
+                      "on-tertiary": "#4f2500",
+                      "inverse-on-surface": "#313031",
+                      "surface-container": "#201f20",
+                      "surface": "#131314",
+                      "primary-fixed": "#e1e0ff",
+                      "outline-variant": "#464554",
+                      "error-container": "#93000a",
+                      "secondary-fixed-dim": "#4ae176",
+                      "secondary-fixed": "#6bff8f",
+                      "tertiary-fixed": "#ffdcc5",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed-variant": "#703700",
+                      "on-surface": "#e5e2e3",
+                      "on-primary-container": "#0d0096",
+                      "inverse-primary": "#494bd6",
+                      "error": "#ffb4ab"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "container-max": "1200px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "section-gap": "128px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Geist"],
+                      "body-md": ["Geist"],
+                      "headline-md": ["Geist"],
+                      "headline-xl-mobile": ["Geist"],
+                      "meta-sm": ["JetBrains Mono"],
+                      "meta-xs": ["JetBrains Mono"],
+                      "body-lg": ["Geist"],
+                      "headline-xl": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                      "meta-sm": ["13px", {"lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "meta-xs": ["11px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-outline-variant dark:border-outline-variant">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop w-full">
+<div class="font-headline-md text-headline-md font-bold text-on-background dark:text-on-background tracking-tighter">SA</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">WORK</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-primary border-b border-primary pb-1" href="#">ABOUT</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">EXPERIENCE</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">CONTACT</a>
+</div>
+<div class="flex items-center gap-unit">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">dark_mode</button>
+<div class="hidden md:block h-4 w-[1px] bg-outline-variant"></div>
+<div class="font-meta-sm text-meta-sm tracking-tighter text-secondary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(74,225,118,0.6)]"></span>
+                    AVAILABLE_FOR_HIRE
+                </div>
+</div>
+</div>
+</nav>
+<main class="pt-24 overflow-x-hidden">
+<!-- Section 04: About -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left: Portrait -->
+<div class="md:col-span-5 flex flex-col gap-unit">
+<div class="relative aspect-[4/5] overflow-hidden border border-outline-variant grain-effect group">
+<img alt="Salman Alameer" class="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-700 ease-in-out" data-alt="A cinematic, high-contrast portrait of a professional male engineer in a dark, minimalist studio setting. The lighting is low-key with sharp edges, highlighting technical precision. The image features a subtle film grain texture to match a brutalist UI aesthetic, maintaining a palette of deep charcoal, cool greys, and muted indigo highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0ZrvbrsLDszWUgkZeqwIroX74DHLt3ZmdnTqQjq71XEpT6uVl8cdWqb0LFVU8xvA1qcUsM2AQXQewwgsHkSzlkWmCSaJ3ArM4E4YcM61wxQUDctqLQ60ZpB7EpOXJ8zlBEkE-1trgZDcd_4UtI26j4LtyatizpmRtpD73uradUgAq2HanS96f_ABUA80F8suk_7cuTd3TyjTDsKvLBbwkbHPHUNRSMsuRbQl1UN9s800QiX4IBp9dh7hkbc2oUiAvCN2ejWDW7JQ"/>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                        johor, malaysia · gmt+8
+                    </span>
+</div>
+</div>
+<!-- Right: Content -->
+<div class="md:col-span-7 flex flex-col gap-gutter">
+<div class="flex flex-col gap-unit">
+<span class="font-meta-sm text-meta-sm text-primary uppercase tracking-tighter">SECTION_04 // PROFILE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">About me</h2>
+</div>
+<div class="flex flex-col gap-6 text-on-surface-variant max-w-2xl">
+<p class="font-body-lg text-body-lg leading-relaxed">
+                        Currently pursuing a Bachelor of Engineering at <span class="text-on-background font-semibold">Universiti Teknologi Malaysia (UTM)</span>, maintaining a CGPA of <span class="text-secondary font-meta-sm">3.87/4.00</span>. My academic journey is rooted in the intersection of structural integrity and digital logic.
+                    </p>
+<p class="font-body-md text-body-md leading-relaxed">
+                        My engineering philosophy is built on the principle of <span class="italic text-primary">architectural intentionality</span>. Whether I am designing physical infrastructure or complex software systems, I prioritize scalability, performance, and clean, modular design. I believe that good engineering is invisible—it simply works under pressure without friction.
+                    </p>
+</div>
+<!-- Skills Strip -->
+<div class="mt-8 grid grid-cols-1 gap-6 border-t border-outline-variant pt-8">
+<div class="flex flex-col gap-3">
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Languages</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">TypeScript</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Python</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">C++</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">SQL</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Frameworks &amp; Backend</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Next.js</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">TailwindCSS</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Node.js</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">PostgreSQL</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Supabase</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Power Platform &amp; Tools</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Power BI</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Power Automate</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Docker</span>
+<span class="px-3 py-1 border border-outline-variant font-meta-sm text-meta-sm hover:border-primary hover:text-primary transition-colors">Git/GitHub</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 05: Experience -->
+<section class="bg-surface-container-lowest py-section-gap border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col gap-unit mb-section-gap">
+<span class="font-meta-sm text-meta-sm text-primary uppercase tracking-tighter">SECTION_05 // CAREER_PATH</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">Experience</h2>
+</div>
+<div class="relative">
+<!-- Vertical Timeline Line -->
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant/50 -translate-x-1/2 hidden md:block"></div>
+<div class="flex flex-col gap-12">
+<!-- Entry: Teleperformance -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-gutter group">
+<div class="md:text-right flex flex-col md:items-end gap-1">
+<span class="font-meta-sm text-meta-sm text-primary">2024 — 2025</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Teleperformance</h3>
+<p class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Content Moderator &amp; Process Analyst</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 top-4 w-3 h-3 bg-background border border-primary -translate-x-1/2 z-10 rounded-full group-hover:bg-primary transition-colors"></div>
+<div class="flex flex-col gap-4">
+<p class="text-on-surface-variant font-body-md max-w-md">Streamlined internal content verification workflows by implementing automated tracking tools, reducing manual processing time by 15% through precision analysis.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Process Optimization</span>
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Data Governance</span>
+</div>
+</div>
+</div>
+<!-- Entry: Yalla-Fitness -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-gutter group">
+<div class="md:order-2 flex flex-col gap-1">
+<span class="font-meta-sm text-meta-sm text-primary">2025</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Yalla-Fitness</h3>
+<p class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Full-Stack Development Intern</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 top-4 w-3 h-3 bg-background border border-primary -translate-x-1/2 z-10 rounded-full group-hover:bg-primary transition-colors"></div>
+<div class="md:text-right flex flex-col md:items-end gap-4">
+<p class="text-on-surface-variant font-body-md max-w-md">Developing a high-performance member management portal using Next.js and Supabase. Focused on real-time scheduling and secure payment integrations.</p>
+<div class="flex gap-2 flex-wrap justify-end">
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Next.js</span>
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Supabase</span>
+</div>
+</div>
+</div>
+<!-- Entry: Arabic Culture Day -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-gutter group">
+<div class="md:text-right flex flex-col md:items-end gap-1">
+<span class="font-meta-sm text-meta-sm text-primary">2024</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Arabic Culture Day</h3>
+<p class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Lead Technical Coordinator</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 top-4 w-3 h-3 bg-background border border-primary -translate-x-1/2 z-10 rounded-full group-hover:bg-primary transition-colors"></div>
+<div class="flex flex-col gap-4">
+<p class="text-on-surface-variant font-body-md max-w-md">Orchestrated the digital logistics for a 1,000+ attendee event. Developed an automated registration system that eliminated wait times during peak check-in hours.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Event Tech</span>
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Automation</span>
+</div>
+</div>
+</div>
+<!-- Entry: YSAG -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-gutter group">
+<div class="md:order-2 flex flex-col gap-1">
+<span class="font-meta-sm text-meta-sm text-primary">2023 — 2024</span>
+<h3 class="font-headline-md text-headline-md text-on-background">YSAG</h3>
+<p class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">Media &amp; Communications Lead</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 top-4 w-3 h-3 bg-background border border-primary -translate-x-1/2 z-10 rounded-full group-hover:bg-primary transition-colors"></div>
+<div class="md:text-right flex flex-col md:items-end gap-4">
+<p class="text-on-surface-variant font-body-md max-w-md">Directed the visual identity and digital presence for the Yemeni Student Association. Scaled social media engagement by 40% through data-driven content strategies.</p>
+<div class="flex gap-2 flex-wrap justify-end">
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Design</span>
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Strategy</span>
+</div>
+</div>
+</div>
+<!-- Entry: UTM -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-gutter group">
+<div class="md:text-right flex flex-col md:items-end gap-1">
+<span class="font-meta-sm text-meta-sm text-primary">2022 — 2026</span>
+<h3 class="font-headline-md text-headline-md text-on-background">UTM</h3>
+<p class="font-meta-xs text-meta-xs text-outline uppercase tracking-widest">B.Eng (Hons) Civil Engineering</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 top-4 w-3 h-3 bg-background border border-primary -translate-x-1/2 z-10 rounded-full group-hover:bg-primary transition-colors"></div>
+<div class="flex flex-col gap-4">
+<p class="text-on-surface-variant font-body-md max-w-md">Focused on structural analysis and computational modeling. Integrating BIM methodologies with modern web technologies to modernize traditional engineering workflows.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">BIM</span>
+<span class="font-meta-xs text-meta-xs px-2 py-0.5 bg-surface-variant text-on-surface-variant">Civil Tech</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant dark:border-outline-variant bg-background dark:bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-unit">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-meta-xs text-meta-xs text-outline dark:text-outline tracking-[0.2em]">S_A // CORE</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary">SALMAN ALAMEER // BUILT FOR SCALE</h2>
+</div>
+<div class="flex gap-gutter">
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary transition-all underline" href="https://github.com">GITHUB</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary transition-all underline" href="https://linkedin.com">LINKEDIN</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant hover:text-primary transition-all underline" href="#">SOURCE_CODE</a>
+</div>
+</div>
+<div class="mt-section-gap pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between gap-4">
+<span class="font-meta-xs text-meta-xs text-outline">© 2024 SALMAN ALAMEER // BUILT FOR SCALE</span>
+<span class="font-meta-xs text-meta-xs text-outline">DESIGNED_AS_A_TECHNICAL_BLUEPRINT</span>
+</div>
+</div>
+</footer>
+</body></html>

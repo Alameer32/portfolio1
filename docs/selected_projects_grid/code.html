@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist-font@1.1.0/fonts/geist-sans/Geist-Black.woff2') format('woff2');
+            font-weight: 800;
+        }
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: #131314;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .project-card:hover {
+            box-shadow: 0 0 20px rgba(192, 193, 255, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353436",
+                        "primary-container": "#8083ff",
+                        "background": "#131314",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "tertiary": "#ffb783",
+                        "surface-container-low": "#1c1b1c",
+                        "on-background": "#e5e2e3",
+                        "surface-container-high": "#2a2a2b",
+                        "on-primary-fixed": "#07006c",
+                        "surface-dim": "#131314",
+                        "surface-container-lowest": "#0e0e0f",
+                        "outline": "#908fa0",
+                        "surface-container-highest": "#353436",
+                        "primary": "#c0c1ff",
+                        "tertiary-container": "#d97721",
+                        "on-secondary-fixed-variant": "#005321",
+                        "on-tertiary-container": "#452000",
+                        "on-primary": "#1000a9",
+                        "surface-bright": "#3a393a",
+                        "secondary-container": "#00b954",
+                        "secondary": "#4ae176",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-tertiary-fixed": "#301400",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-tint": "#c0c1ff",
+                        "on-secondary-container": "#004119",
+                        "on-secondary-fixed": "#002109",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#003915",
+                        "inverse-surface": "#e5e2e3",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-tertiary": "#4f2500",
+                        "inverse-on-surface": "#313031",
+                        "surface-container": "#201f20",
+                        "surface": "#131314",
+                        "primary-fixed": "#e1e0ff",
+                        "outline-variant": "#464554",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#4ae176",
+                        "secondary-fixed": "#6bff8f",
+                        "tertiary-fixed": "#ffdcc5",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "on-surface": "#e5e2e3",
+                        "on-primary-container": "#0d0096",
+                        "inverse-primary": "#494bd6",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "section-gap": "128px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "headline-xl-mobile": ["Geist"],
+                        "meta-sm": ["JetBrains Mono"],
+                        "meta-xs": ["JetBrains Mono"],
+                        "body-lg": ["Geist"],
+                        "headline-xl": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                        "meta-sm": ["13px", {"lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "meta-xs": ["11px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-outline-variant dark:border-outline-variant">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop w-full">
+<div class="font-headline-md text-headline-md font-bold text-on-background dark:text-on-background tracking-tighter">SA</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-primary dark:text-primary border-b border-primary pb-1 transition-transform duration-150 active:scale-95" href="#">WORK</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200 active:scale-95" href="#">ABOUT</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200 active:scale-95" href="#">EXPERIENCE</a>
+<a class="font-meta-sm text-meta-sm tracking-tighter uppercase text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-200 active:scale-95" href="#">CONTACT</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">dark_mode</button>
+<div class="hidden md:flex items-center gap-2 px-3 py-1 border border-outline-variant rounded">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-meta-xs text-meta-xs tracking-tighter text-on-surface">AVAILABLE_FOR_HIRE</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap">
+<!-- Projects Section Header -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-16">
+<div class="flex flex-col gap-4">
+<span class="font-meta-sm text-meta-sm text-primary tracking-widest">03 — SELECTED PROJECTS</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background">More work.</h1>
+</div>
+</section>
+<!-- Bento Grid / Projects Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Project: SAGE -->
+<div class="project-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-6 transition-all duration-300 hover:scale-[1.02] hover:border-primary cursor-pointer">
+<div class="relative aspect-video mb-6 overflow-hidden border border-outline-variant bg-surface-container">
+<img alt="AI Interface" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A sophisticated and high-tech artificial intelligence interface featuring glowing neural network pathways in shades of electric indigo and deep violet. The background is a sleek, dark obsidian texture with floating geometric data visualizations that evoke a sense of advanced computation and logic. The lighting is focused and cinematic, highlighting the precision of the digital architecture within a professional engineering aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUfuks1SYivg7c8u55S0qo1bKM6AxoGARePwFkgN0xgU0_1b5EuTOopkY9_ruFP3ypoQ0Fchybr0qK0jCZKzosXyBlCwLc-Yx_FvEy9Fxti_hdaD7kGYn0sEGLxYuw86m2sDZh66OpA06AbiOev1xEdebvEwJUxnSLhLuHfKv8bFXeWlVAxSK9fB5ysTQwBliMfBcXcNj5ayOY0E6E1tn-BY_UDek0K9_1AxJmk_kSZb58gq6QeCUft5XNp_0rby_BOqb3wFexiVA"/>
+</div>
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline-md text-headline-md text-on-surface">SAGE</h3>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">code</span>
+</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Personal AI assistant optimized for technical workflows, utilizing local LLMs for private code analysis and architectural planning.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">PYTHON</span>
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">PYTORCH</span>
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">FASTAPI</span>
+</div>
+<div class="flex justify-end pt-4 border-t border-outline-variant">
+<span class="font-meta-sm text-meta-sm text-primary tracking-tighter uppercase group-hover:underline">VIEW_PROJECT //</span>
+</div>
+</div>
+</div>
+<!-- Project: EduSync -->
+<div class="project-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-6 transition-all duration-300 hover:scale-[1.02] hover:border-primary cursor-pointer">
+<div class="relative aspect-video mb-6 overflow-hidden border border-outline-variant bg-surface-container">
+<img alt="Resource Platform" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A clean and modern digital collaboration platform designed for academic resource sharing, presented in a dark-mode UI with sharp borders and indigo accents. The interface shows organized modules of documents and live collaboration feeds, characterized by technical brutalist design principles and high-density information layouts. The atmosphere is professional and studious, utilizing a palette of deep grays, charcoal, and vibrant teal highlights to denote activity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBynXHF2ecWTe0mYMX2Yr7oKOunb8gpE3TPuC-y3ZvKnwz1-SIo4G9UgNZGA1e5htLuAm7PT5dDjyN_9rCVyqpC00NslMXdiwerhMVNXWOIgG13r4bRFnJWuYC_fzVArzyxeRmL8Sppf3-FmkhU4hzvPYIqhfS8x_Ct3mE598HSFa3NNqeANvuWV1tsOBhtbJUi-atsMBdGwdyqqp7Oh0PR77IB3ijxenaashawStKcRNE0C13pxrFP-ZvzgXCj6Zr1EH9j1d90eps"/>
+</div>
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline-md text-headline-md text-on-surface">EduSync</h3>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">code</span>
+</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Peer-to-peer resource sharing ecosystem featuring real-time collaborative document editing and distributed storage logic.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">TYPESCRIPT</span>
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">NEXTJS</span>
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">REDIS</span>
+</div>
+<div class="flex justify-end pt-4 border-t border-outline-variant">
+<span class="font-meta-sm text-meta-sm text-primary tracking-tighter uppercase group-hover:underline">VIEW_PROJECT //</span>
+</div>
+</div>
+</div>
+<!-- Project: Cook&Go -->
+<div class="project-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-6 transition-all duration-300 hover:scale-[1.02] hover:border-primary cursor-pointer">
+<div class="relative aspect-video mb-6 overflow-hidden border border-outline-variant bg-surface-container">
+<img alt="Delivery Logistics" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A dynamic and efficient logistics dashboard for a food delivery service, featuring real-time map tracking with glowing neon route lines in emerald green. The visual style is rooted in technical precision, showing complex data points such as estimated arrival times and courier status in a structured, monospaced font hierarchy. The dark background emphasizes the high-contrast UI elements, creating a sense of speed, reliability, and modern urban engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlkVhZ-IMg5lcC2b25Xgx4PnxrXriDbxiLOhP6QXG39SMN488-vBD1svbhbo_Lajp3qoF667JGORkBkjrAqhS5jZvWSxg3SI-DnSoSqvMEG-xj44NbfADoFCil-o4jfHHeDk5pHuxTfxebkvLPZN10WwOotr1tdUO4yPCKz0j5cgoWCZ9dM5hNFbHs8hR2dGPm_WuBD3UjX4Lwzt4OjCHrQkV2I7GNQez8-RcJ4WT179Xn7l8CGStNRj1pFGpmHT8Y9J6aWkmsMAg"/>
+</div>
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-3">
+<h3 class="font-headline-md text-headline-md text-on-surface">Cook&amp;Go</h3>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">code</span>
+</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            High-performance logistics engine for food delivery, optimizing routing algorithms to minimize latency in dense urban environments.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">RUST</span>
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">POSTGRES</span>
+<span class="font-meta-xs text-meta-xs px-2 py-1 bg-surface-container-high text-primary border border-outline-variant">GRPC</span>
+</div>
+<div class="flex justify-end pt-4 border-t border-outline-variant">
+<span class="font-meta-sm text-meta-sm text-primary tracking-tighter uppercase group-hover:underline">VIEW_PROJECT //</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background border-t border-outline-variant dark:border-outline-variant w-full py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-unit">
+<div class="flex flex-col md:flex-row justify-between items-end md:items-center gap-8 mb-16">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary">
+                    LET'S BUILD<br/>SOMETHING SCALEABLE.
+                </div>
+<div class="flex flex-col gap-4 text-right">
+<a class="font-meta-sm text-meta-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary underline transition-all" href="#">GITHUB</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary underline transition-all" href="#">LINKEDIN</a>
+<a class="font-meta-sm text-meta-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary underline transition-all" href="#">SOURCE_CODE</a>
+</div>
+</div>
+<div class="flex justify-between items-center pt-8 border-t border-outline-variant">
+<div class="font-meta-xs text-meta-xs text-outline dark:text-outline uppercase">© 2024 SALMAN ALAMEER // BUILT FOR SCALE</div>
+<div class="flex gap-2 items-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-meta-xs text-meta-xs text-on-surface-variant">SYSTEMS_NORMAL</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
