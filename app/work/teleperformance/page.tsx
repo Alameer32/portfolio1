@@ -14,7 +14,9 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import TechTag from "@/components/ui/TechTag";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
-import { projects, teleperformanceProjects } from "@/lib/projects";
+import { ArrowRight } from "lucide-react";
+import { projects } from "@/lib/projects";
+import { subProjectDetails } from "@/lib/teleperformance-details";
 
 const project = projects.find((p) => p.id === "teleperformance")!;
 
@@ -38,64 +40,6 @@ const stats = [
   { label: "Duration", value: "1 Year" },
   { label: "User Range", value: "Intern → CEO" },
   { label: "Departments", value: "HR, Finance, GTM, Ops" },
-];
-
-const subProjectDetails = [
-  {
-    title: "Hiring Request Management System",
-    icon: "Users",
-    context:
-      "Before this system, hiring requests were scattered across emails, spreadsheets, and informal Slack messages. There was no single source of truth, and the same role could be requested multiple times across different countries without anyone knowing.",
-    solution:
-      "Built the first centralized hiring workflow in the company using Power Apps with a multi-level approval chain. Managers submit requests through a standardized form, which routes through department heads and HR based on configurable business rules. Power Automate handles notifications, reminders, and escalations.",
-    impact:
-      "Deployed across MY, CN, KR, JP, ID, and TH — the first tool to span all six APAC offices. Reduced duplicate requests and cut hiring lead time significantly.",
-    technologies: ["Power Apps", "Power Automate", "SharePoint"],
-  },
-  {
-    title: "Promotion Management System",
-    icon: "TrendingUp",
-    context:
-      "Promotions were managed through a patchwork of Excel sheets and email threads. Approval chains were unclear, promotion letters were manually written, and there was no audit trail.",
-    solution:
-      "Designed a multi-level approval flow where each promotion request moves through a configurable chain of managers, HR, and regional directors. The system auto-generates promotion letters from templates and sends automated reminders for pending approvals.",
-    impact:
-      "Eliminated manual letter generation entirely. The full audit trail gave HR leadership visibility into promotion velocity and bottlenecks across departments.",
-    technologies: ["Power Apps", "Power Automate", "SharePoint"],
-  },
-  {
-    title: "Global Talent Mobility Platform",
-    icon: "Globe",
-    context:
-      "International employee transfers were coordinated through email chains and shared Excel files — a process prone to version conflicts, missed steps, and compliance gaps when moving employees across jurisdictions.",
-    solution:
-      "Replaced the entire workflow with a Next.js intake form that feeds into Power Automate orchestration and SharePoint document management. A companion Power Apps operations console gives the GTM team real-time visibility into every active transfer.",
-    impact:
-      "Dramatically reduced transfer processing time and eliminated version-conflict issues. The operations console became the GTM team's primary tool for daily standups.",
-    technologies: ["Next.js", "TypeScript", "Power Automate", "SharePoint", "Power Apps"],
-  },
-  {
-    title: "Finance Reimbursement Automation",
-    icon: "DollarSign",
-    context:
-      "Reimbursement claims followed a convoluted paper-based process: employees submitted physical receipts, managers signed off manually, and finance manually entered data into their system. Processing time averaged weeks.",
-    solution:
-      "Built a Next.js submission portal where employees upload receipts and fill out structured claim forms. Claims route through manager approval, then multi-level finance review, before automatically consolidating into the finance system.",
-    impact:
-      "Reduced processing time from weeks to days. The structured digital format eliminated data-entry errors and gave finance real-time visibility into outstanding claims.",
-    technologies: ["Next.js", "TypeScript", "Power Automate", "SharePoint"],
-  },
-  {
-    title: "Client Event Management",
-    icon: "Calendar",
-    context:
-      "Client events — site visits, executive summits, VIP tours — were tracked in ad-hoc spreadsheets. Post-event analysis was manual and inconsistent, making it hard to measure ROI or improve future events.",
-    solution:
-      "Built a Power Platform app for end-to-end event lifecycle management. Copilot Studio AI analyzes event performance data and auto-generates summary reports, replacing hours of manual analysis.",
-    impact:
-      "Gave leadership consistent, data-driven event ROI metrics for the first time. The AI-generated reports saved the events team significant preparation time per event.",
-    technologies: ["Power Apps", "Power Automate", "Copilot Studio"],
-  },
 ];
 
 const lessons = [
@@ -239,10 +183,18 @@ export default function TeleperformancePage() {
                         </div>
                       </div>
 
-                      <div className="mt-6 flex flex-wrap gap-2 border-t border-border pt-4">
-                        {sub.technologies.map((tech) => (
-                          <TechTag key={tech} label={tech} />
-                        ))}
+                      <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
+                        <div className="flex flex-wrap gap-2">
+                          {sub.technologies.map((tech) => (
+                            <TechTag key={tech} label={tech} />
+                          ))}
+                        </div>
+                        <a
+                          href={`/work/teleperformance/${sub.slug}`}
+                          className="flex shrink-0 items-center gap-2 font-mono text-xs font-medium uppercase tracking-wider text-accent transition-colors hover:text-accent/80"
+                        >
+                          Case study <ArrowRight size={12} />
+                        </a>
                       </div>
                     </div>
                   </Reveal>

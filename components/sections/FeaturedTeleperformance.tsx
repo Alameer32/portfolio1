@@ -6,6 +6,7 @@ import {
   Globe,
   DollarSign,
   Calendar,
+  ArrowRight,
 } from "lucide-react";
 import Container from "@/components/layout/Container";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -82,7 +83,10 @@ export default function FeaturedTeleperformance() {
             const Icon = iconMap[sub.icon] ?? Globe;
             return (
               <Reveal key={sub.title} delay={0.05 * i}>
-                <div className="group flex h-full flex-col justify-between rounded-lg border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
+                <a
+                  href={`/work/teleperformance/${sub.slug}`}
+                  className="group flex h-full flex-col justify-between rounded-lg border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
+                >
                   <div>
                     <div className="flex items-start justify-between">
                       <Icon
@@ -101,12 +105,15 @@ export default function FeaturedTeleperformance() {
                       {sub.description}
                     </p>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {sub.technologies.map((tech) => (
-                      <TechTag key={tech} label={tech} />
-                    ))}
+                  <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
+                    <div className="flex flex-wrap gap-2">
+                      {sub.technologies.map((tech) => (
+                        <TechTag key={tech} label={tech} />
+                      ))}
+                    </div>
+                    <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
                   </div>
-                </div>
+                </a>
               </Reveal>
             );
           })}
@@ -117,7 +124,10 @@ export default function FeaturedTeleperformance() {
             const Icon = iconMap[sub.icon] ?? Globe;
             return (
               <Reveal key={sub.title} delay={0.05 * i}>
-                <div className="group flex h-full flex-col justify-between rounded-lg border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
+                <a
+                  href={`/work/teleperformance/${sub.slug}`}
+                  className="group flex h-full flex-col justify-between rounded-lg border border-border bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
+                >
                   <div>
                     <div className="flex items-start justify-between">
                       <Icon
@@ -136,12 +146,15 @@ export default function FeaturedTeleperformance() {
                       {sub.description}
                     </p>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {sub.technologies.map((tech) => (
-                      <TechTag key={tech} label={tech} />
-                    ))}
+                  <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
+                    <div className="flex flex-wrap gap-2">
+                      {sub.technologies.map((tech) => (
+                        <TechTag key={tech} label={tech} />
+                      ))}
+                    </div>
+                    <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
                   </div>
-                </div>
+                </a>
               </Reveal>
             );
           })}

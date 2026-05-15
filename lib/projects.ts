@@ -25,6 +25,7 @@ export interface Project {
 }
 
 export interface TeleperformanceSubProject {
+  slug: string;
   title: string;
   description: string;
   icon: string;
@@ -259,6 +260,7 @@ export const projects: Project[] = [
 
 export const teleperformanceProjects: TeleperformanceSubProject[] = [
   {
+    slug: "hiring-request",
     title: "Hiring Request Management System",
     description:
       "First centralized hiring workflow in the company, deployed across MY/CN/KR/JP/ID/TH.",
@@ -266,6 +268,7 @@ export const teleperformanceProjects: TeleperformanceSubProject[] = [
     technologies: ["Power Apps", "Power Automate", "SharePoint"],
   },
   {
+    slug: "promotion-management",
     title: "Promotion Management System",
     description:
       "Multi-level approval flow with automated reminders and auto-generated promotion letters.",
@@ -273,6 +276,7 @@ export const teleperformanceProjects: TeleperformanceSubProject[] = [
     technologies: ["Power Apps", "Power Automate", "SharePoint"],
   },
   {
+    slug: "global-talent-mobility",
     title: "Global Talent Mobility Platform",
     description:
       "Replaced Excel/email with Next.js intake → Power Automate → SharePoint, plus Power Apps ops console.",
@@ -280,6 +284,7 @@ export const teleperformanceProjects: TeleperformanceSubProject[] = [
     technologies: ["Next.js", "TypeScript", "Power Automate", "SharePoint", "Power Apps"],
   },
   {
+    slug: "finance-reimbursement",
     title: "Finance Reimbursement Automation",
     description:
       "Next.js intake → manager approval → multi-level review → finance system consolidation.",
@@ -287,6 +292,7 @@ export const teleperformanceProjects: TeleperformanceSubProject[] = [
     technologies: ["Next.js", "TypeScript", "Power Automate", "SharePoint"],
   },
   {
+    slug: "event-management",
     title: "Client Event Management",
     description:
       "Power Platform app using AI to analyze event performance and auto-generate reports.",

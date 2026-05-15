@@ -3,6 +3,7 @@ import Container from "@/components/layout/Container";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Reveal from "@/components/ui/Reveal";
 import AvailabilityDot from "@/components/ui/AvailabilityDot";
+import ContactForm from "@/components/ui/ContactForm";
 import { site } from "@/lib/site";
 
 export default function Contact() {
@@ -26,30 +27,36 @@ export default function Contact() {
             <Reveal delay={0.1}>
               <a
                 href={`mailto:${site.email}`}
-                className="mt-8 inline-block text-2xl font-bold tracking-tight text-text transition-colors duration-200 hover:text-accent md:text-4xl lg:text-5xl"
+                className="group relative mt-8 inline-block"
               >
-                {site.email}
+                <span className="text-2xl font-bold tracking-tight text-text transition-colors duration-300 group-hover:text-accent md:text-4xl lg:text-5xl">
+                  {site.email}
+                </span>
+                <span className="absolute inset-x-0 bottom-0 h-1 w-0 bg-accent transition-all duration-500 ease-in-out group-hover:w-full" />
               </a>
             </Reveal>
           </div>
 
           {/* Right — status card */}
           <Reveal delay={0.1}>
-            <div className="rounded-lg border border-border bg-surface p-6">
-              <p className="font-mono text-xs uppercase tracking-wider text-muted">
-                Current Status
-              </p>
-              <div className="mt-3 flex items-center gap-2">
-                <AvailabilityDot />
-                <span className="font-mono text-sm font-medium uppercase tracking-wider text-text">
-                  Open to new ventures
-                </span>
+            <div className="relative overflow-hidden rounded-lg border border-border bg-surface p-6">
+              <div className="absolute inset-0 bg-[radial-gradient(#464554_1px,transparent_1px)] opacity-10 [background-size:20px_20px]" />
+              <div className="relative">
+                <p className="font-mono text-[11px] uppercase tracking-widest text-muted">
+                  Current Status
+                </p>
+                <div className="mt-3 flex items-center gap-2">
+                  <AvailabilityDot />
+                  <span className="font-mono text-sm font-medium uppercase tracking-wider text-text">
+                    Open to new ventures
+                  </span>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-muted">
+                  I specialize in architecting scalable web systems and
+                  minimalist user experiences. Reach out for consulting,
+                  full-time opportunities, or architectural reviews.
+                </p>
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-muted">
-                I specialize in architecting scalable web systems and
-                minimalist user experiences. Reach out for consulting,
-                full-time opportunities, or architectural reviews.
-              </p>
             </div>
           </Reveal>
         </div>
@@ -71,7 +78,7 @@ export default function Contact() {
               </div>
               <ArrowUpRight
                 size={18}
-                className="text-muted transition-colors group-hover:text-accent"
+                className="text-muted transition-transform transition-colors duration-200 group-hover:translate-x-0.5 group-hover:text-accent"
               />
             </a>
 
@@ -89,7 +96,7 @@ export default function Contact() {
               </div>
               <ArrowUpRight
                 size={18}
-                className="text-muted transition-colors group-hover:text-accent"
+                className="text-muted transition-transform transition-colors duration-200 group-hover:translate-x-0.5 group-hover:text-accent"
               />
             </a>
 
@@ -107,9 +114,16 @@ export default function Contact() {
               </div>
               <Download
                 size={18}
-                className="text-muted transition-colors group-hover:text-accent"
+                className="text-muted transition-colors duration-200 group-hover:text-accent"
               />
             </a>
+          </div>
+        </Reveal>
+
+        {/* Terminal contact form */}
+        <Reveal delay={0.2}>
+          <div className="mt-12">
+            <ContactForm />
           </div>
         </Reveal>
       </Container>
