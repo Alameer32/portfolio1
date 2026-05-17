@@ -11,7 +11,7 @@ export const experience: Experience[] = [
     role: "Automation Developer",
     org: "Teleperformance Malaysia",
     description:
-      "Shipped 5 enterprise platforms across 6 countries with combined $500K+ ROI. Users from intern level to regional CEOs.",
+      "Shipped 5 enterprise platforms across 6 countries with combined $300K+ ROI. Users from intern level to regional CEOs.",
   },
   {
     dates: "2022 – 2026",

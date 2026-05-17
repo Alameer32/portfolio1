@@ -73,7 +73,7 @@ export const projects: Project[] = [
     id: "teleperformance",
     title: "Enterprise Automation at Teleperformance",
     tagline:
-      "One-year internship. Five platforms. $500K+ in measured ROI. Users from intern level to regional CEOs across six countries.",
+      "One-year internship. Five platforms. $300K+ in measured ROI. Users from intern level to regional CEOs across six countries.",
     description:
       "Full-year Automation Developer internship at Teleperformance Malaysia, building enterprise platforms across HR, Finance, Global Talent Mobility, Recruiting, and Operations. Combined business impact exceeded US$500K in ROI.",
     image: "/images/teleperformance.png",

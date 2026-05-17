@@ -74,7 +74,7 @@ export default function OgImage() {
           }}
         >
           {[
-            { value: "$500K+", label: "ROI DELIVERED" },
+            { value: "$300K+", label: "ROI DELIVERED" },
             { value: "6 countries", label: "DEPLOYMENTS" },
             { value: "3.87", label: "GPA / 4.00" },
           ].map((stat) => (

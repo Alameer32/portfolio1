@@ -12,7 +12,7 @@ export const site = {
   subtagline:
     "Final-year Software Engineering student at UTM. I ship enterprise automation, full-stack products, and AI-integrated systems end-to-end.",
   stats: [
-    { value: "$500K+", label: "ROI delivered" },
+    { value: "$300K+", label: "ROI delivered" },
     { value: "6 countries", label: "production deployments" },
     { value: "3.87", label: "GPA / 4.00" },
   ],

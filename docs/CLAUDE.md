@@ -142,7 +142,7 @@ portfolio/
 Single-page scroll with sticky nav. Section IDs match nav anchors. Optional case-study detail pages for the two featured projects.
 
 1. **Sticky nav** — logo (`SA` monogram), nav links (Work, About, Experience, Contact), theme toggle, "Available for hire" pill with green pulse dot.
-2. **Hero (~85vh)** — eyebrow mono line → big headline → sub-headline → 3 inline stats (`$500K+ ROI`, `6 countries`, `GPA 3.87`) → CTA row (primary "View work", secondary "Download CV", inline icons for GitHub/LinkedIn/email).
+2. **Hero (~85vh)** — eyebrow mono line → big headline → sub-headline → 3 inline stats (`$300K+ ROI`, `6 countries`, `GPA 3.87`) → CTA row (primary "View work", secondary "Download CV", inline icons for GitHub/LinkedIn/email).
 3. **Featured: Yalla-Fitness** — case study block with mockup, metadata column, 3-column highlight grid.
 4. **Featured: Teleperformance** — case study block with 4-stat row, 5-card grid of sub-projects.
 5. **Selected Projects** — filterable grid (filter chips: All / Full-Stack / Mobile / AI / Game / Backend). Cards for the 7 "more work" projects.
@@ -173,7 +173,7 @@ export const site = {
   subtagline:
     "Final-year Software Engineering student at UTM. I ship enterprise automation, full-stack products, and AI-integrated systems end-to-end.",
   stats: [
-    { value: "$500K+", label: "ROI delivered" },
+    { value: "$300K+", label: "ROI delivered" },
     { value: "6 countries", label: "production deployments" },
     { value: "3.87", label: "GPA / 4.00" },
   ],

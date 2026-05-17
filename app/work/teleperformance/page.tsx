@@ -35,7 +35,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; strokeWidth?:
 };
 
 const stats = [
-  { label: "Measured ROI", value: "$500K+" },
+  { label: "Measured ROI", value: "$300K+" },
   { label: "Countries", value: "6" },
   { label: "Platforms", value: "5" },
   { label: "Duration", value: "1 Year" },
@@ -46,7 +46,7 @@ const stats = [
 const lessons = [
   "Enterprise software lives or dies by adoption. The most elegant architecture means nothing if the end users — who range from interns to regional CEOs — find it confusing. Every design decision started with 'who will use this and what do they already know?'",
   "Power Platform is underestimated. For internal tools that need to integrate with SharePoint and Microsoft 365, it delivers production-ready solutions faster than custom-coded alternatives — and the business team can maintain them.",
-  "Measuring impact in dollar terms changes the conversation. When you can say '$500K+ in combined ROI,' stakeholders listen differently than when you say 'improved efficiency.'",
+  "Measuring impact in dollar terms changes the conversation. When you can say '$300K+ in combined ROI,' stakeholders listen differently than when you say 'improved efficiency.'",
   "Working across six countries taught me that 'same process' doesn't mean 'same implementation.' Regional compliance requirements, approval hierarchies, and cultural expectations all vary — the system had to be configurable, not just translatable.",
 ];
 
