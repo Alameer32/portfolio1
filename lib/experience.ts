@@ -7,14 +7,14 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    dates: "2024 – 2025",
+    dates: "2025 – 2026",
     role: "Automation Developer",
     org: "Teleperformance Malaysia",
     description:
       "Shipped 5 enterprise platforms across 6 countries with combined $500K+ ROI. Users from intern level to regional CEOs.",
   },
   {
-    dates: "2025",
+    dates: "2022 – 2026",
     role: "Final-Year Project — Yalla-Fitness",
     org: "Universiti Teknologi Malaysia",
     description:

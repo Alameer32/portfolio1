@@ -17,7 +17,7 @@ export default function About() {
             <div>
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border border-border">
                 <Image
-                  src="/images/portrait.jpg"
+                  src="/images/portrait.jpeg"
                   alt={`Portrait of ${site.name}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 320px"

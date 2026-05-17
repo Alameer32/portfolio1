@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://portfolio1-alameer32.vercel.app";
+const siteUrl = "https://portfolio1-wheat-nu.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

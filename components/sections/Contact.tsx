@@ -11,7 +11,7 @@ export default function Contact() {
     <section id="contact" className="border-t border-border py-24 md:py-32">
       <Container>
         <Reveal>
-          <SectionLabel number="06" label="Contact" />
+          <SectionLabel number="07" label="Contact" />
         </Reveal>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-[1fr_320px]">

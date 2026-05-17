@@ -5,7 +5,7 @@ export const site = {
   email: "salmanalameer2@gmail.com",
   phone: "+60 11-3973 2242",
   github: "https://github.com/Alameer32",
-  linkedin: "https://www.linkedin.com/in/salman-alameer/",
+  linkedin: "https://www.linkedin.com/in/salman-alameer-6084b1173",
   resumeUrl: "/resume.pdf",
   available: true,
   tagline: "I build software that ships and scales.",

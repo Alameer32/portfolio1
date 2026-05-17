@@ -37,7 +37,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="font-mono text-xs font-medium uppercase tracking-wider text-muted underline underline-offset-4 transition-colors hover:text-text"
             >
-              Source_Code
+             
             </a>
           </div>
         </div>
