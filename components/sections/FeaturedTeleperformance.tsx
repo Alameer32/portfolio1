@@ -27,7 +27,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; strokeWidth?:
 };
 
 const stats = [
-  { label: "Measured ROI", value: 500, prefix: "$", suffix: "K+" },
+  { label: "Measured ROI", value: 300, prefix: "$", suffix: "K+" },
   { label: "Countries", value: 6 },
   { label: "Platforms", value: 5 },
   { label: "Duration", display: "1YR" },

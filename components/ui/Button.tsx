@@ -33,7 +33,24 @@ type ButtonAsLink = BaseProps &
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 function isExternal(href: string) {
-  return href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("/resume");
+  return (
+    href.startsWith("http") ||
+    href.startsWith("mailto:") ||
+    href.startsWith("/resume") ||
+    href.endsWith(".pdf")
+  );
+}
+
+function getPdfLinkProps(href: string) {
+  if (!href.startsWith("/resume") && !href.endsWith(".pdf")) {
+    return {};
+  }
+
+  return {
+    target: "_blank" as const,
+    rel: "noopener noreferrer",
+    download: "Salman-Alameer-Resume.pdf",
+  };
 }
 
 export default function Button({
@@ -50,7 +67,7 @@ export default function Button({
 
     if (isExternal(href)) {
       return (
-        <a className={classes} href={href} {...rest}>
+        <a className={classes} href={href} {...rest} {...getPdfLinkProps(href)}>
           {children}
         </a>
       );

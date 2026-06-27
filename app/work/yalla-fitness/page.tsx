@@ -144,14 +144,13 @@ export default function YallaFitnessPage() {
               <Reveal delay={0.1}>
                 <div className="relative overflow-hidden rounded-lg border border-border bg-surface">
                   <div className="absolute -inset-4 bg-accent/5 blur-3xl" />
-                  <div className="relative aspect-[4/3] w-full">
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} mockup`}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                      priority
+                  <div className="relative aspect-video w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/8anJiEnWJ2c"
+                      title={`${project.title} demo`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full"
                     />
                   </div>
                 </div>
@@ -203,33 +202,14 @@ export default function YallaFitnessPage() {
 
             <Reveal delay={0.05}>
               <div className="mt-8 overflow-hidden rounded-lg border border-border bg-surface">
-                <pre className="overflow-x-auto p-6 font-mono text-xs leading-relaxed text-muted">
-{`┌─────────────────────────────────────────────────┐
-│                  FLUTTER CLIENT                  │
-│  ┌──────────┐  ┌──────────┐  ┌───────────────┐  │
-│  │   UI /   │  │  Domain  │  │     Data      │  │
-│  │   BLoC   │──│  (Pure)  │──│  (Supabase)   │  │
-│  └──────────┘  └──────────┘  └───────┬───────┘  │
-└──────────────────────────────────────┼──────────┘
-                                       │
-                    ┌──────────────────┼──────────────────┐
-                    │            SUPABASE                  │
-                    │  ┌──────┐ ┌───────┐ ┌────────────┐  │
-                    │  │ Auth │ │Postgres│ │  Storage   │  │
-                    │  └──────┘ │ + RLS  │ └────────────┘  │
-                    │           └───┬───┘                  │
-                    │  ┌────────────┴────────────┐         │
-                    │  │    Edge Functions        │         │
-                    │  │  (AI Coach Proxy + API)  │         │
-                    │  └─────────────────────────┘         │
-                    └─────────────────────────────────────┘
-                                       │
-                    ┌──────────────────┼──────────────────┐
-                    │        NEXT.JS ADMIN CONSOLE         │
-                    │  Role-gated CMS · Content Mod        │
-                    │  Live Mobile Preview · Analytics      │
-                    └──────────────────────────────────────┘`}
-                </pre>
+                <Image
+                  src="/images/BLoC.png"
+                  alt={`${project.title} system design — BLoC architecture`}
+                  width={1640}
+                  height={922}
+                  sizes="100vw"
+                  className="h-auto w-full"
+                />
               </div>
             </Reveal>
 

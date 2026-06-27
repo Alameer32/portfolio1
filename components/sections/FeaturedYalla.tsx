@@ -10,6 +10,21 @@ import { projects } from "@/lib/projects";
 
 const yalla = projects.find((p) => p.id === "yalla-fitness")!;
 
+const mockups = [
+  {
+    src: "/images/app mockup 3.jpg",
+    alt: `${yalla.title} app mockup — screen 3`,
+  },
+  {
+    src: "/images/app mockup 1.jpg",
+    alt: `${yalla.title} app mockup — screen 1`,
+  },
+  {
+    src: "/images/app mockup 2.jpg",
+    alt: `${yalla.title} app mockup — screen 2`,
+  }
+];
+
 const highlights = [
   {
     icon: Layers,
@@ -90,22 +105,29 @@ export default function FeaturedYalla() {
             </Reveal>
           </div>
 
-          {/* Right column — mockup image */}
+          {/* Right column — mockup images */}
           <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-lg border border-border bg-surface">
+            <div className="relative overflow-hidden rounded-lg border border-border bg-surface p-3 md:p-4">
               <div className="absolute -inset-4 bg-accent/5 blur-3xl" />
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src={yalla.image}
-                  alt={`${yalla.title} app mockup`}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
+              <div className="relative grid grid-cols-3 gap-2 md:gap-3">
+                {mockups.map((mockup) => (
+                  <div
+                    key={mockup.src}
+                    className="relative aspect-[9/19.5] w-full overflow-hidden rounded-md border border-border/60 bg-background"
+                  >
+                    <Image
+                      src={mockup.src}
+                      alt={mockup.alt}
+                      fill
+                      sizes="(max-width: 1024px) 33vw, 16vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                ))}
               </div>
               <div className="absolute bottom-4 left-4">
                 <span className="rounded border border-border bg-background/80 px-3 py-1 font-mono text-xs text-muted backdrop-blur-sm">
-                  CLIENT_MOCKUP_V1.02
+                  MOCKUP
                 </span>
               </div>
             </div>

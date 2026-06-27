@@ -1,7 +1,7 @@
 export const site = {
   name: "Salman Alameer",
   role: "Software Engineer",
-  location: "Johor, Malaysia",
+  location: "Kuala Lumpur, Malaysia",
   email: "salmanalameer2@gmail.com",
   phone: "+60 11-3973 2242",
   github: "https://github.com/Alameer32",

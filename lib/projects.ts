@@ -219,7 +219,7 @@ export const projects: Project[] = [
       "Cross-platform messaging with real-time delivery, read receipts, and group chats.",
     description:
       "A modern messaging platform with real-time message delivery and intuitive UI design.",
-    image: "/images/realtime-chat.png",
+    image: "",
     technologies: ["Flutter", "Firebase", "Real-time Database"],
     features: [
       "Real-time message delivery with read receipts",

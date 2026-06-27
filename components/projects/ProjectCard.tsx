@@ -20,13 +20,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <div className="group flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
       {/* Image */}
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded">
-        <Image
-          src={project.image}
-          alt={`${project.title} screenshot`}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-        />
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={`${project.title} screenshot`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-background">
+            <Code size={32} className="text-muted/40" strokeWidth={1.5} />
+          </div>
+        )}
       </div>
 
       {/* Title row */}

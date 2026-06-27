@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 
 interface RevealProps {
@@ -18,7 +18,20 @@ export default function Reveal({
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-15% 0px" });
+  const [pageRestored, setPageRestored] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const shouldShow = isInView || pageRestored;
+
+  useEffect(() => {
+    const onPageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) {
+        setPageRestored(true);
+      }
+    };
+
+    window.addEventListener("pageshow", onPageShow);
+    return () => window.removeEventListener("pageshow", onPageShow);
+  }, []);
 
   if (prefersReducedMotion) {
     return (
@@ -34,7 +47,7 @@ export default function Reveal({
       className={className}
       style={{ width }}
       initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      animate={shouldShow ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.4, ease: "easeOut", delay }}
     >
       {children}
