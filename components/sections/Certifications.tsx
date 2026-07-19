@@ -18,8 +18,7 @@ export default function Certifications() {
             Professional Credentials
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-            A collection of certifications in cloud architecture, full-stack
-            development, and enterprise automation.
+            A collection of professional certifications "coming soon...".
           </p>
         </Reveal>
 
