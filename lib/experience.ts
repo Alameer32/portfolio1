@@ -7,11 +7,18 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    dates: "2025 – 2026",
-    role: "Automation Developer",
+    dates: "2026 – Present",
+    role: "AI Officer",
     org: "Teleperformance Malaysia",
     description:
-      "Shipped 5 enterprise platforms across 6 countries with combined $300K+ ROI. Users from intern level to regional CEOs.",
+      "Full-time role delivering production automation and AI across seven countries: OCR and local-LLM document extraction, Microsoft Copilot Studio agents, and enterprise workflow platforms — $500K+ in measured ROI from hours saved and headcount avoided.",
+  },
+  {
+    dates: "2025 – 2026",
+    role: "Automation Developer (Internship)",
+    org: "Teleperformance Malaysia",
+    description:
+      "Full-year internship that grew into the full-time AI Officer role. Built the company's first centralized hiring workflow plus promotion, finance, talent-mobility and event platforms. Users from intern level to regional CEOs.",
   },
   {
     dates: "2022 – 2026",
@@ -38,6 +45,6 @@ export const experience: Experience[] = [
     role: "B.Sc. Software Engineering",
     org: "Universiti Teknologi Malaysia",
     description:
-      "GPA 3.87/4.00. Coursework: Data Structures & Algorithms, Database Systems, Software Engineering, Software Design & Architecture, AI, Computational Intelligence.",
+      "GPA 3.88/4.00. Coursework: Data Structures & Algorithms, Database Systems, Software Engineering, Software Design & Architecture, Operating Systems, Artificial Intelligence, Computational Intelligence.",
   },
 ];

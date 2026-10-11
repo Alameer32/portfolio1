@@ -11,7 +11,7 @@ export default function Contact() {
     <section id="contact" className="border-t border-border py-24 md:py-32">
       <Container>
         <Reveal>
-          <SectionLabel number="07" label="Contact" />
+          <SectionLabel number="06" label="Contact" />
         </Reveal>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-[1fr_320px]">
@@ -34,6 +34,26 @@ export default function Contact() {
                 </span>
                 <span className="absolute inset-x-0 bottom-0 h-1 w-0 bg-accent transition-all duration-500 ease-in-out group-hover:w-full" />
               </a>
+            </Reveal>
+
+            <Reveal delay={0.12}>
+              <ul className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-8">
+                {site.phones.map((phone) => (
+                  <li key={phone.tel}>
+                    <a
+                      href={`tel:${phone.tel}`}
+                      className="group inline-flex flex-col transition-colors duration-200"
+                    >
+                      <span className="font-mono text-xs uppercase tracking-wider text-muted">
+                        {phone.label}
+                      </span>
+                      <span className="mt-1 font-mono text-base text-text transition-colors duration-200 group-hover:text-accent md:text-lg">
+                        {phone.display}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           </div>
 

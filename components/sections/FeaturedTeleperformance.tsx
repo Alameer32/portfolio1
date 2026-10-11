@@ -6,6 +6,8 @@ import {
   Globe,
   DollarSign,
   Calendar,
+  ScanText,
+  Bot,
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
@@ -24,13 +26,15 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; strokeWidth?:
   Globe,
   DollarSign,
   Calendar,
+  ScanText,
+  Bot,
 };
 
 const stats = [
-  { label: "Measured ROI", value: 300, prefix: "$", suffix: "K+" },
-  { label: "Countries", value: 6 },
-  { label: "Platforms", value: 5 },
-  { label: "Duration", display: "1YR" },
+  { label: "Measured ROI", value: 500, prefix: "$", suffix: "K+" },
+  { label: "Countries", value: 7 },
+  { label: "Solutions", value: teleperformanceProjects.length },
+  { label: "Tenure", display: "1YR+" },
 ];
 
 export default function FeaturedTeleperformance() {
@@ -78,7 +82,7 @@ export default function FeaturedTeleperformance() {
           </div>
         </Reveal>
 
-        {/* 5-card grid: 2 cols top, 3 cols bottom */}
+        {/* Card grid: 2 cols top, 3 cols below */}
         <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-2">
           {teleperformanceProjects.slice(0, 2).map((sub, i) => {
             const Icon = iconMap[sub.icon] ?? Globe;

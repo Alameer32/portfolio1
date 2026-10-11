@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Next.js admin console with role-gated access, content moderation, and CMS with live mobile-fidelity preview",
       "Integrations: Spotify, Google Fit / Health Connect, barcode-scanned food catalogue",
     ],
-    year: "2025",
+    year: "2026",
     type: "Mobile + Web (Full-Stack)",
     category: "Full-Stack",
     githubUrl: "https://github.com/Alameer32/yalla-fitness",
@@ -71,11 +71,11 @@ export const projects: Project[] = [
   },
   {
     id: "teleperformance",
-    title: "Enterprise Automation at Teleperformance",
+    title: "Enterprise Automation & AI at Teleperformance",
     tagline:
-      "One-year internship. Five platforms. $300K+ in measured ROI. Users from intern level to regional CEOs across six countries.",
+      "From intern to AI Officer. Seven solutions. $500K+ in measured ROI. Users from intern level to regional CEOs across seven countries.",
     description:
-      "Full-year Automation Developer internship at Teleperformance Malaysia, building enterprise platforms across HR, Finance, Global Talent Mobility, Recruiting, and Operations. Combined business impact exceeded US$500K in ROI.",
+      "Joined Teleperformance Malaysia as a full-year Automation Developer intern (2025–2026) and progressed to full-time AI Officer (2026–present). Delivering production automation and AI across HR, Finance, Global Talent Mobility, Recruiting, and client operations — $500K+ in measured ROI through hours saved and headcount avoided, with end-to-end ownership of deployment, multi-country rollout, user training, and ongoing maintenance.",
     image: "/images/teleperformance.png",
     technologies: [
       "Power Apps",
@@ -83,18 +83,23 @@ export const projects: Project[] = [
       "Power Automate Desktop",
       "SharePoint",
       "Copilot Studio",
+      "PaddleOCR",
+      "Ollama",
+      "FastAPI",
       "Next.js",
       "TypeScript",
     ],
     features: [
-      "Hiring Request Management System — first centralized hiring workflow in the company, deployed across MY/CN/KR/JP/ID/TH",
+      "Hiring Request Management System — first centralized hiring workflow in the company, launched in MY/TH and adopted across CN/KR/JP/ID/VN; 200+ users up to regional CEO",
+      "Intelligent Document Extraction — email-triggered pipeline: Power Automate → PaddleOCR → local LLM (Ollama) → FastAPI → client dashboard (confidential client project)",
+      "AI Agents (Copilot Studio) — client site-assessment agent that calculates ROI and generates the proposal deck, plus a recruiting agent that drafts tailored interview questions",
       "Promotion Management System — multi-level approval flow with automated reminders and auto-generated promotion letters",
       "Global Talent Mobility Platform — replaced Excel/email with Next.js intake → Power Automate → SharePoint, plus Power Apps ops console",
-      "Finance Reimbursement Automation — Next.js intake → manager approval → multi-level review → finance system consolidation",
+      "Finance Reimbursement Automation — Next.js intake → manager approval → multi-level review → finance system submission, with OCR extracting expense details from receipts",
       "Client Event Management — Power Platform app using AI to analyze event performance and auto-generate reports",
     ],
-    year: "2024 – 2025",
-    type: "Enterprise Automation",
+    year: "2025 – Present",
+    type: "Enterprise Automation & AI",
     category: "Automation",
     caseStudyUrl: "/work/teleperformance",
     isUniversity: false,
@@ -263,7 +268,7 @@ export const teleperformanceProjects: TeleperformanceSubProject[] = [
     slug: "hiring-request",
     title: "Hiring Request Management System",
     description:
-      "First centralized hiring workflow in the company, deployed across MY/CN/KR/JP/ID/TH.",
+      "First centralized hiring workflow in the company, launched in MY/TH and adopted across CN/KR/JP/ID/VN.",
     icon: "Users",
     technologies: ["Power Apps", "Power Automate", "SharePoint"],
   },
@@ -287,9 +292,9 @@ export const teleperformanceProjects: TeleperformanceSubProject[] = [
     slug: "finance-reimbursement",
     title: "Finance Reimbursement Automation",
     description:
-      "Next.js intake → manager approval → multi-level review → finance system consolidation.",
+      "Next.js intake → manager approval → multi-level review → finance system submission, with OCR on receipts.",
     icon: "DollarSign",
-    technologies: ["Next.js", "TypeScript", "Power Automate", "SharePoint"],
+    technologies: ["Next.js", "TypeScript", "Power Automate", "SharePoint", "OCR"],
   },
   {
     slug: "event-management",
@@ -298,6 +303,22 @@ export const teleperformanceProjects: TeleperformanceSubProject[] = [
       "Power Platform app using AI to analyze event performance and auto-generate reports.",
     icon: "Calendar",
     technologies: ["Power Apps", "Power Automate", "Copilot Studio"],
+  },
+  {
+    slug: "document-extraction",
+    title: "Intelligent Document Extraction",
+    description:
+      "Email-triggered pipeline: OCR + locally hosted LLM extract fields and populate a client dashboard automatically.",
+    icon: "ScanText",
+    technologies: ["Power Automate", "PaddleOCR", "Ollama", "FastAPI"],
+  },
+  {
+    slug: "ai-agents",
+    title: "AI Agents (Copilot Studio)",
+    description:
+      "Site-assessment agent that calculates ROI and builds proposal decks, and a recruiting agent that drafts interview questions.",
+    icon: "Bot",
+    technologies: ["Copilot Studio", "Power Automate", "LLM"],
   },
 ];
 

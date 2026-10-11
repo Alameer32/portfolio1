@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Salman Alameer — Software Engineer";
+export const alt = "Salman Alameer — AI Officer";
 export const size = {
   width: 1200,
   height: 630,
@@ -32,7 +32,7 @@ export default function OgImage() {
             marginBottom: 24,
           }}
         >
-          // SOFTWARE ENGINEER
+          // AI OFFICER · TELEPERFORMANCE
         </div>
 
         {/* Name */}
@@ -74,9 +74,9 @@ export default function OgImage() {
           }}
         >
           {[
-            { value: "$300K+", label: "ROI DELIVERED" },
-            { value: "6 countries", label: "DEPLOYMENTS" },
-            { value: "3.87", label: "GPA / 4.00" },
+            { value: "$500K+", label: "ROI DELIVERED" },
+            { value: "7 countries", label: "DEPLOYMENTS" },
+            { value: "3.88", label: "GPA / 4.00" },
           ].map((stat) => (
             <div key={stat.label} style={{ display: "flex", flexDirection: "column" }}>
               <div

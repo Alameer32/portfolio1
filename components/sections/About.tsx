@@ -27,7 +27,7 @@ export default function About() {
               <div className="mt-3 flex items-center gap-2 text-muted">
                 <MapPin size={14} />
                 <span className="font-mono text-xs uppercase tracking-wider">
-                  {site.location} · GMT+8
+                  {site.location} · {site.timezone}
                 </span>
               </div>
             </div>
@@ -45,15 +45,19 @@ export default function About() {
             <Reveal delay={0.05}>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-muted">
                 <p>
-                  Currently pursuing a Bachelor of Software Engineering at{" "}
+                  AI Officer at{" "}
+                  <strong className="text-text">Teleperformance Malaysia</strong>
+                  , progressing from intern to full-time while delivering
+                  production automation and AI across seven countries. I
+                  graduated with a Bachelor of Software Engineering from{" "}
                   <strong className="text-text">
                     Universiti Teknologi Malaysia (UTM)
                   </strong>
-                  , maintaining a CGPA of{" "}
-                  <span className="font-mono text-text">3.87/4.00</span>. My
-                  academic journey is grounded in building real systems that
-                  solve real problems — from enterprise platforms used across six
-                  countries to AI-integrated mobile apps.
+                  , with a CGPA of{" "}
+                  <span className="font-mono text-text">3.88/4.00</span>. I build
+                  real systems that solve real problems — from OCR and
+                  local-LLM document pipelines and Copilot Studio agents to
+                  enterprise workflow platforms and AI-integrated mobile apps.
                 </p>
                 <p>
                   My engineering philosophy is built on the principle of{" "}

@@ -39,7 +39,7 @@ export default function Hero() {
         {/* Eyebrow */}
         <Reveal>
           <p className="font-mono text-sm text-muted">
-            // software engineer · based in Kuala Lumpur, Malaysia.
+            // ai officer @ teleperformance · based in {site.location}.
           </p>
         </Reveal>
 

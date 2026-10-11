@@ -12,7 +12,7 @@ const links = [
   { label: "Work", hash: "#work" },
   { label: "About", hash: "#about" },
   { label: "Experience", hash: "#experience" },
-  { label: "Certifications", hash: "#certifications" },
+  // { label: "Certifications", hash: "#certifications" }, // hidden for now
   { label: "Contact", hash: "#contact" },
 ];
 

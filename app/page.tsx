@@ -6,7 +6,9 @@ import FeaturedTeleperformance from "@/components/sections/FeaturedTeleperforman
 import ProjectsGrid from "@/components/sections/ProjectsGrid";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
-import Certifications from "@/components/sections/Certifications";
+// Certifications section is hidden for now — re-enable by restoring the import,
+// the <Certifications /> render below, and the nav link in components/layout/Nav.tsx.
+// import Certifications from "@/components/sections/Certifications";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
@@ -20,7 +22,7 @@ export default function Home() {
         <ProjectsGrid />
         <About />
         <Experience />
-        <Certifications />
+        {/* <Certifications /> */}
         <Contact />
       </main>
       <Footer />

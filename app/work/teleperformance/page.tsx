@@ -6,6 +6,8 @@ import {
   Globe,
   DollarSign,
   Calendar,
+  ScanText,
+  Bot,
 } from "lucide-react";
 import Container from "@/components/layout/Container";
 import Nav from "@/components/layout/Nav";
@@ -32,22 +34,24 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; strokeWidth?:
   Globe,
   DollarSign,
   Calendar,
+  ScanText,
+  Bot,
 };
 
 const stats = [
-  { label: "Measured ROI", value: "$300K+" },
-  { label: "Countries", value: "6" },
-  { label: "Platforms", value: "5" },
-  { label: "Duration", value: "1 Year" },
+  { label: "Measured ROI", value: "$500K+" },
+  { label: "Countries", value: "7" },
+  { label: "Solutions", value: String(subProjectDetails.length) },
+  { label: "Tenure", value: "Intern → AI Officer" },
   { label: "User Range", value: "Intern → CEO" },
-  { label: "Departments", value: "HR, Finance, GTM, Ops" },
+  { label: "Departments", value: "HR, Finance, GTM, Recruiting, Ops" },
 ];
 
 const lessons = [
   "Enterprise software lives or dies by adoption. The most elegant architecture means nothing if the end users — who range from interns to regional CEOs — find it confusing. Every design decision started with 'who will use this and what do they already know?'",
   "Power Platform is underestimated. For internal tools that need to integrate with SharePoint and Microsoft 365, it delivers production-ready solutions faster than custom-coded alternatives — and the business team can maintain them.",
-  "Measuring impact in dollar terms changes the conversation. When you can say '$300K+ in combined ROI,' stakeholders listen differently than when you say 'improved efficiency.'",
-  "Working across six countries taught me that 'same process' doesn't mean 'same implementation.' Regional compliance requirements, approval hierarchies, and cultural expectations all vary — the system had to be configurable, not just translatable.",
+  "Measuring impact in dollar terms changes the conversation. When you can say '$500K+ in combined ROI,' stakeholders listen differently than when you say 'improved efficiency.'",
+  "Working across seven countries taught me that 'same process' doesn't mean 'same implementation.' Regional compliance requirements, approval hierarchies, and cultural expectations all vary — the system had to be configurable, not just translatable.",
 ];
 
 export default function TeleperformancePage() {
@@ -129,7 +133,7 @@ export default function TeleperformancePage() {
             <Reveal>
               <SectionLabel label="Platforms" />
               <h2 className="mt-4 text-3xl font-extrabold tracking-tight md:text-4xl">
-                Five platforms, one internship
+                From intern to AI Officer
               </h2>
             </Reveal>
 

@@ -5,6 +5,8 @@ import {
   Globe,
   DollarSign,
   Calendar,
+  ScanText,
+  Bot,
 } from "lucide-react";
 import Container from "@/components/layout/Container";
 import Nav from "@/components/layout/Nav";
@@ -21,6 +23,8 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; strokeWidth?:
   Globe,
   DollarSign,
   Calendar,
+  ScanText,
+  Bot,
 };
 
 interface TpCaseStudyProps {

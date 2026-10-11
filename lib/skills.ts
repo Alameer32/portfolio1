@@ -5,23 +5,52 @@ export interface SkillGroup {
 
 export const skills: SkillGroup[] = [
   {
+    group: "AI & Automation",
+    items: [
+      "Power Apps",
+      "Power Automate",
+      "Power Automate Desktop",
+      "Copilot Studio",
+      "PaddleOCR",
+      "Ollama",
+      "LLM Integration",
+      "AI Agent Design",
+    ],
+  },
+  {
     group: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "Dart", "C++", "Java", "PHP", "SQL"],
+    items: [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Dart",
+      "SQL",
+      "Java",
+      "C++",
+      "PHP",
+      "HTML",
+      "CSS",
+    ],
   },
   {
     group: "Frameworks",
-    items: ["Next.js", "React", "Express.js", "Flutter", "Vue.js", "Tailwind CSS"],
+    items: ["FastAPI", "Next.js", "React", "Express.js", "Flutter", "Vue.js", "Tailwind CSS"],
   },
   {
     group: "Backend & Databases",
-    items: ["Supabase", "Postgres", "MongoDB", "Firebase", "MySQL", "SharePoint"],
+    items: ["Supabase", "Postgres", "MongoDB", "Firebase", "MySQL", "SharePoint", "REST APIs"],
   },
   {
-    group: "Power Platform",
-    items: ["Power Apps", "Power Automate", "Power Automate Desktop", "Copilot Studio"],
-  },
-  {
-    group: "Tools",
-    items: ["Git", "REST APIs", "CI/CD", "Vercel", "Figma"],
+    group: "Practices & Tools",
+    items: [
+      "Git",
+      "CI/CD",
+      "Vercel",
+      "Figma",
+      "Row-Level Security",
+      "Audit Logging",
+      "Requirements Gathering",
+      "User Training",
+    ],
   },
 ];

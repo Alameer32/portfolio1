@@ -21,13 +21,15 @@ const siteUrl = "https://portfolio1-wheat-nu.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Salman Alameer — Software Engineer",
+    default: "Salman Alameer — AI Officer",
     template: "%s | Salman Alameer",
   },
   description:
-    "Final-year Software Engineering student at UTM. I ship enterprise automation, full-stack products, and AI-integrated systems end-to-end.",
+    "AI Officer at Teleperformance and Software Engineering graduate from UTM. I ship enterprise automation, document-AI pipelines, and full-stack products end-to-end.",
   keywords: [
     "Salman Alameer",
+    "AI Officer",
+    "AI & Automation Developer",
     "Software Engineer",
     "Full-Stack Developer",
     "Portfolio",
@@ -43,13 +45,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Salman Alameer",
-    title: "Salman Alameer — Software Engineer",
+    title: "Salman Alameer — AI Officer",
     description:
       "I build software that ships and scales. Enterprise automation, full-stack products, and AI-integrated systems.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Salman Alameer — Software Engineer",
+    title: "Salman Alameer — AI Officer",
     description:
       "I build software that ships and scales. Enterprise automation, full-stack products, and AI-integrated systems.",
   },
